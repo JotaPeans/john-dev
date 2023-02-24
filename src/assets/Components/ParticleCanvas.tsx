@@ -5,8 +5,6 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 
-import colors from "tailwindcss/colors";
-
 interface IParticlesCanvas {
     className?: string
 }
@@ -61,10 +59,10 @@ const ParticleCanvas = ({ className }: IParticlesCanvas) => {
                 },
                 particles: {
                     color: {
-                        value: colors.slate[400],
+                        value: "#94a3b8",
                     },
                     links: {
-                        color: colors.slate[500],
+                        color: "#64748b",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

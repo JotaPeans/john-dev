@@ -1,8 +1,6 @@
 import React, { useState, useCallback, useContext, useEffect } from "react";
 import NodesContext from './assets/contexts/NodesContext';
 
-import colors from "tailwindcss/colors";
-
 //icons
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
@@ -54,7 +52,7 @@ const App = () => {
     const [projectPopupData, setProjectPopupData] = useState<IProjectPopupData>();
 
     const [title, setTitle] = useState("Pedro.dev()");
-    const [backgroundColor, setBackgroundColor] = useState<string>(colors.slate[900]);
+    const [backgroundColor, setBackgroundColor] = useState<string>("#0f172a");
     const [font, setFont] = useState<string>("font-normal");
 
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge[]>(INITIAL_EDGES);
