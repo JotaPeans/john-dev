@@ -1,0 +1,19 @@
+.bounce {
+    animation: bounce step-end infinite;
+    animation-duration: 1s;
+}
+
+@keyframes bounce {
+    from {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    from {
+        opacity: 0.8;
+    }
+
+}
