@@ -4,13 +4,14 @@ import NodesContext from './assets/contexts/NodesContext';
 //icons
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiTypescript } from "react-icons/si";
 import { GrStripe } from "react-icons/gr";
 import { IoArrowUndo } from "react-icons/io5";
 
 //images / videos
 import flip1 from "./assets/images/flip-1.png";
 import flip2 from "./assets/images/flip-2.png";
+import asaas from "./assets/images/asaas.png";
 import preview1 from "./assets/images/preview-1.png";
 import preview1Video from "./assets/videos/lavateriaPay-preview.mp4";
 
@@ -91,7 +92,7 @@ const App = () => {
 
                 { showProject ? <ProjectPopup setShow={setShowProject} title={projectPopupData?.title} source={projectPopupData?.source}/> : null}
 
-                <div className="relative w-full h-full z-10 flex flex-col items-center gap-5 sm:gap-10 backdrop-blur-sm py-5 sm:py-10">
+                <div className="relative w-full h-full z-10 flex flex-col items-center gap-5 sm:gap-10 backdrop-blur-[2px] py-5 sm:py-10">
 
                     <div className="text-4xl xl:text-8xl text-slate-200 font-mono z-20">
                         <WriteOnScreen textToWrite={title} change={title}/>
@@ -110,6 +111,13 @@ const App = () => {
                                         <FaReact className="text-cyan-400 text-2xl"/>
                                     </Tooltip>
 
+                                    <Tooltip content="Typescript">
+                                        <div className="relative flex justify-center items-center">
+                                            <span className="w-6 h-4 absolute bottom-0 right-0 bg-white rounded-lg"></span>
+                                            <SiTypescript className="text-blue-700 text-2xl rounded-sm relative"/>
+                                        </div>
+                                    </Tooltip>
+
                                     <Tooltip content="node.js">
                                         <FaNodeJs className="text-green-500 text-2xl"/>
                                     </Tooltip>
@@ -119,10 +127,16 @@ const App = () => {
                                     </Tooltip>
 
                                     <Tooltip content="Stripe">
-                                        <div className="relative flex justify-center items-center">
+                                        <a target="_blank" href="https://stripe.com/br" className="relative flex justify-center items-center">
                                             <span className="w-4 h-4 absolute bg-white"></span>
                                             <GrStripe className="text-indigo-500 text-2xl rounded-lg relative"/>
-                                        </div>
+                                        </a>
+                                    </Tooltip>
+
+                                    <Tooltip content="Asaas">
+                                        <a target="_blank" href="https://www.asaas.com/" className=" w-[25.5px] h-[25.5px] rounded-lg overflow-clip">
+                                            <img src={asaas} alt="" className="h-full" />
+                                        </a>
                                     </Tooltip>
                                 </Card>
                             </div>

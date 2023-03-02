@@ -20,8 +20,8 @@ const Card = ({image, onClick, text, children}: ICard) => {
     }, []);
 
     return (
-        <div onClick={onClick} className="cursor-pointer hover:scale-105 transition-transform w-72 h-auto bg-slate-800 rounded-xl border border-slate-600 p-2 flex flex-col gap-2 text-slate-100 shadow-xl">
-            {wait ? <span className="w-full h-[168px] rounded-lg animate-pulse bg-slate-700"></span> : <img className="w-full rounded-lg" src={image} alt="" />}
+        <div className="hover:scale-105 transition-transform w-72 h-auto bg-slate-800 rounded-xl border border-slate-600 p-2 flex flex-col gap-2 text-slate-100 shadow-xl">
+            {wait ? <span className="w-full h-[168px] rounded-lg animate-pulse bg-slate-700"></span> : <img onClick={onClick} className="cursor-pointer w-full rounded-lg" src={image} alt="" />}
             {wait ? <span className="w-full h-7 rounded-md animate-pulse bg-slate-700"></span> : <h2 className={`text-xl ${font === "font-normal" ? "font-normal" : font}`}>{text}</h2>}
             {wait ? (
                 <div className="flex items-center gap-2">

@@ -22,7 +22,7 @@ const ProjectPopup = ({title, source, setShow}: IPopup) => {
                             <div className="h-4 w-4 rounded-full bg-green-500 hover:bg-green-600 transition-all z-50"></div>
 
                             <div className="absolute w-full h-full flex items-center justify-center text-slate-100">
-                                <h2>{title}</h2>      
+                                <a target="_blank" href="https://www.lavateriapay.com.br">{title}</a>      
                             </div>
                         </div>
 
